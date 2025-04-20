@@ -61,7 +61,7 @@
             <h2>About Us</h2>
             <p>We are an instructor and students passionate about semantic HTML authoring and modern CSS.</p>
         </section>
-        <section id="contact">
+        <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <form>
                 <label for="name">Name</label>
@@ -69,7 +69,7 @@
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" placeholder="Email" required />
                 <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="message" required></textarea>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
@@ -77,14 +77,6 @@
     <footer>
         <p>&copy; 2024 TonyPro. All rights reserved.</p>
     </footer>
-    <script>
-        document
-          .getElementById('menu-toggle')
-          .addEventListener('click', function () {
-            document.getElementById('nav-links').classList.toggle('active');
-            document.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle').ariaExpanded == "true" ? "false" : "true";
-          });
-    </script>
 </body>
 <script src="script.js"></script>
 </html>
