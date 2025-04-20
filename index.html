@@ -14,32 +14,22 @@
 <body>
     <header>
         <nav>
-            <p class="logo">
-                TonyPro
-            </p>
+            <p class="logo">TonyPro</p>
             <a class="menu-toggle" id="menu-toggle" aria-label="Menu button" aria-expanded="false">
-                &#9776;
+                ☰
             </a>
             <ul class="nav-links" id="nav-links">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#features">Features</a>
-                </li>
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home" class="hero">
             <h1>Introducing Tony Pro</h1>
-            <p>Your solution to modern web design</p>
+            <p>Your solution to modern design</p>
             <a href="#features" class="cta-button">Learn More</a>
         </section>
         <section id="features" class="features">
@@ -67,9 +57,9 @@
                 <p>@layer and container queries.</p>
             </article>
         </section>
-        <section id="about">
+        <section id="about" class="about">
             <h2>About Us</h2>
-            <p>We are an instructor and students passionate about semantic HTML authoring and modern CSS</p>
+            <p>We are an instructor and students passionate about semantic HTML authoring and modern CSS.</p>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
@@ -79,16 +69,22 @@
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" placeholder="Email" required />
                 <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Message" required></textarea>
+                <textarea id="message" name="message" placeholder="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>
-            &copy; 2024 TonyPro. All rights reserved
-        </p>
+        <p>&copy; 2024 TonyPro. All rights reserved.</p>
     </footer>
+    <script>
+        document
+          .getElementById('menu-toggle')
+          .addEventListener('click', function () {
+            document.getElementById('nav-links').classList.toggle('active');
+            document.getElementById('menu-toggle').ariaExpanded = document.getElementById('menu-toggle').ariaExpanded == "true" ? "false" : "true";
+          });
+    </script>
 </body>
 <script src="script.js"></script>
 </html>
